@@ -49,7 +49,7 @@
             <td><?php echo $kisi["soyadi"];?></td>
             <td><?php echo $kisi["yas"];?></td>
             <td><?php echo $kisi["hobileri"];?></td>
-            <td><a href="ekle.php?index=<?php echo $key;  ?>">Düzenle</a></td>
+            <td><a href="duzenle.php?index=<?php echo $key;  ?>">Düzenle</a></td>
             <td>
               <a href="index.php" >Sil</a>
             </td>

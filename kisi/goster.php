@@ -29,7 +29,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><?php echo $kisi['adi']; ?> - Kişi Göster</title>
+    <title><?php echo $kisi['adi']; ?> - Kişisini Göster</title>
   </head>
   <body>
     <h3><?php echo 'Adi: ',$kisi["adi"];?><br/>
