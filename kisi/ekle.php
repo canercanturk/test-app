@@ -1,10 +1,6 @@
 <?php
   if($_POST){
     $kisi=$_POST;
-    $kisi['adi']=str_replace(",","%25%",$kisi["adi"]);
-    $kisi['soyadi']=str_replace(",","%25%",$kisi["soyadi"]);
-    $kisi['yas']=str_replace(",","%25%",$kisi["yas"]);
-    $kisi['hobiler']=str_replace(",","%25%",$kisi["hobiler"]);
     $satir=$kisi["adi"].",".$kisi["soyadi"].",".$kisi["yas"].",".$kisi["hobileri"];
     $satir=implode(",",$kisi);
     if (file_put_contents('kisiler.dat',$satir."\n",FILE_APPEND))
@@ -34,7 +30,7 @@
       <input type="text" name="soyadi" value=""/>
       <br/>
       Yaş:
-      <input type="text" name="yas" value=""/>
+      <input type="text" name="yaş" value=""/>
       <br/>
       Hobileri:
       <input type="text" name="hobiler" value=""/>
