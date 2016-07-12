@@ -1,9 +1,10 @@
 <?php
+
   $kisiler=array();
   if(file_exists('kisiler.dat')){
     $kisilerDat=file_get_contents('kisiler.dat');
     if (trim($kisilerDat)) {
-      $kisilerDat=explode("\n",trim($kisilerDat));
+    $kisilerDat=explode("\n",trim($kisilerDat));
     foreach ($kisilerDat as $kisiLine) {
       $kisiLine=explode(",",$kisiLine);
       $kisi=array(
@@ -45,13 +46,13 @@
       <tbody>
         <?php foreach ($kisiler as $key => $kisi) { ?>
           <tr>
-            <td><a href="goster.php?index=<?php echo $key; ?>"><?php echo $kisi["adi"];?></a></td>
-            <td><?php echo $kisi["soyadi"];?></td>
-            <td><?php echo $kisi["yas"];?></td>
-            <td><?php echo $kisi["hobileri"];?></td>
+            <td><a href="goster.php?index=<?php echo $key; ?>"><?php echo str_replace("%25%",",",$kisi["adi"]);?></a></td>
+            <td><?php echo str_replace("%25%",",",$kisi["soyadi"]);?></td>
+            <td><?php echo str_replace("%25%",",",$kisi["yas"]);?></td>
+            <td><?php echo str_replace("%25%",",",$kisi["hobileri"]);?></td>
             <td><a href="duzenle.php?index=<?php echo $key;  ?>">Düzenle</a></td>
             <td>
-              <a href="index.php" >Sil</a>
+              <a href="sil.php?index=<?php echo $key;?>" >Sil</a>
             </td>
           </tr>
         <?php } ?>
