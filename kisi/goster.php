@@ -11,10 +11,10 @@
       foreach ($kisilerDat as $kisiLine) {
         $kisiLine = explode(",", $kisiLine);
         $kisi = array(
-          "adi" => $kisiLine[0],
-          "soyadi" => $kisiLine[1],
-          "yas" => $kisiLine[2],
-          "hobileri"=>$kisiLine[3]
+          "adi"=>str_replace("%25%",",",$kisiLine[0]),
+          "soyadi"=>str_replace("%25%",",",$kisiLine[1]),
+          "yas"=>str_replace("%25%",",", $kisiLine[2]),
+          "hobileri"=>str_replace("%25%",",",$kisiLine[3]),
         );
         $kisiler[] = $kisi;
       }
@@ -35,7 +35,7 @@
     <h3><?php echo 'Adi: ',$kisi["adi"];?><br/>
       <?php echo 'Soyadi: ' ,$kisi["soyadi"];?><br/>
       <?php echo 'Yas: ', $kisi["yas"];?><br/>
-      <?php echo 'Hobiler: ' ,$kisi["hobileri"];?><br/>
+      <?php echo 'Hobiler: ',$kisi["hobileri"];?><br/>
       <?php //echo "<pre>";
       //print_r($kisi);
       //echo "</pre>"; ?>
