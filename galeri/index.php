@@ -9,11 +9,10 @@
    </head>
    <body>
      <h1>Galeriye Hoşgeldiniz</h1>
-     <h2><a href="../index.php"> Geri dön</a></h2><br>
+     <h2><a href="../index.html"> Geri dön</a></h2><br>
          <?php for($i=0; $i< count($resimler); $i++){ ?>
            <a href="goster.php?index=<?php echo $i; ?>"><img height="80px" src="<?php echo $resimler[$i]; ?>"  alt="Kapadokya manzaraları"/></a>
          <?php } ?>
        </tr>
-      </table>
    </body>
  </html>
